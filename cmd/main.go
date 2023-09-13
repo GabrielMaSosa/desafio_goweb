@@ -14,11 +14,11 @@ import (
 func main() {
 
 	// Cargo csv.
-	list, err := LoadTicketsFromFile("../tickets.csv")
+	list, err := LoadTicketsFromFile("./tickets.csv")
 	if err != nil {
 		panic("Couldn't load tickets")
 	}
-
+	
 	r := gin.Default()
 	r.GET("/ping", func(c *gin.Context) { c.String(200, "pong") })
 

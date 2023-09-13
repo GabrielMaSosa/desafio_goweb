@@ -28,7 +28,7 @@ type Mhandler struct {
 }
 
 func (h *Mhandler) MapRoutes() {
-	h.servhdnler.AverageDestination()
+
 	mygroup := h.dta.Group("/ticket")
 	mygroup.GET("/getByCountry/:dest", h.servhdnler.GetTicketsByCountry())
 	mygroup.GET("/getAverage/:dest", h.servhdnler.AverageDestination())
